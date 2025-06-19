@@ -1,7 +1,7 @@
 /*
 Problem: Mini-Max Sum
 Difficulty: Unknown
-URL: https://www.hackerrank.com/dashboard
+URL: https://www.hackerrank.com/interview/preparation-kits/one-week-preparation-kit/one-week-day-one/challenges
 Language: python
 Date: 2025-06-19
 */
