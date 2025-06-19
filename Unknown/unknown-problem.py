@@ -1,7 +1,7 @@
 /*
-Problem: Time Conversion
+Problem: unknown-problem
 Difficulty: Unknown
-URL: https://www.hackerrank.com/interview/preparation-kits/one-week-preparation-kit/one-week-day-one
+URL: https://www.hackerrank.com/test/eoipgdk427n/questions/a8taf02a12a
 Language: python
 Date: 2025-06-19
 */
@@ -14,35 +14,27 @@ import random
 import re
 import sys
 
+
+
 #
-# Complete the 'timeConversion' function below.
+# Complete the 'findMedian' function below.
 #
-# The function is expected to return a STRING.
-# The function accepts STRING s as parameter.
+# The function is expected to return an INTEGER.
+# The function accepts INTEGER_ARRAY arr as parameter.
 #
 
-def timeConversion(s):
-    sp = s.split(':')
-    if "A" in sp[2]:
-        sp[2] = sp[2].replace("AM","")
-        if sp[0]=="12":
-            sp[0]="00"
-    else:
-        sp[2] = sp[2].replace("PM","")
-        if sp[0]=="12":
-            sp[0]="12"
-        else:
-            sp[0]=str(int(sp[0])+12)
-    return ":".join(sp)
-    
-            
+def findMedian(arr):
+    # Write your code here
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    s = input()
+    n = int(input().strip())
 
-    result = timeConversion(s)
+    arr = list(map(int, input().rstrip().split()))
 
-    fptr.write(result + '\n')
+    result = findMedian(arr)
+
+    fptr.write(str(result) + '\n')
 
     fptr.close()
