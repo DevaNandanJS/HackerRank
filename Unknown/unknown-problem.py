@@ -24,7 +24,7 @@ import sys
 #
 
 def findMedian(arr):
-    n = arr.st
+    n = arr.sort()
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
