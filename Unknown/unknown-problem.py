@@ -25,7 +25,7 @@ import sys
 
 def findMedian(arr):
     a = arr.sort()
-    n = 
+    n = len
     med = n//2
     return med
 
