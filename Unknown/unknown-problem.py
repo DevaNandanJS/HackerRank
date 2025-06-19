@@ -1,7 +1,7 @@
 /*
-Problem: Mini-Max Sum
+Problem: Time Conversion
 Difficulty: Unknown
-URL: https://www.hackerrank.com/interview/preparation-kits/one-week-preparation-kit/one-week-day-one/challenges
+URL: https://www.hackerrank.com/interview/preparation-kits/one-week-preparation-kit/one-week-day-one
 Language: python
 Date: 2025-06-19
 */
@@ -15,19 +15,34 @@ import re
 import sys
 
 #
-# Complete the 'miniMaxSum' function below.
+# Complete the 'timeConversion' function below.
 #
-# The function accepts INTEGER_ARRAY arr as parameter.
+# The function is expected to return a STRING.
+# The function accepts STRING s as parameter.
 #
 
-def miniMaxSum(arr):
-    arr.sort(reverse=True)
-    minn = sum(arr[1::])
-    maxx = sum(arr[:len(arr)-1:])
-    print(minn,maxx)
-
+def timeConversion(s):
+    sp = s.split(':')
+    if "A" in sp[2]:
+        sp[2] = sp[2].replace("AM","")
+        if sp[0]=="12":
+            sp[0]="00"
+    else:
+        sp[2] = sp[2].replace("PM","")
+        if sp[0]=="12":
+            sp[0]="12"
+        else:
+            sp[0]=str(int(sp[0])+12)
+    return ":".join(sp)
+    
+            
 if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    arr = list(map(int, input().rstrip().split()))
+    s = input()
 
-    miniMaxSum(arr)
+    result = timeConversion(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
