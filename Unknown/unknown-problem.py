@@ -25,7 +25,7 @@ import sys
 
 def findMedian(arr):
     n = len(arr)
-    median = arr[n//2+1
+    median = arr[n//2+1]
     return median
 
 if __name__ == '__main__':
