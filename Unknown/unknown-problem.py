@@ -3,7 +3,7 @@ Problem: unknown-problem
 Difficulty: Unknown
 URL: https://www.hackerrank.com/test/eoipgdk427n/questions/a8taf02a12a
 Language: python
-Date: 2025-06-19
+Date: 2025-06-20
 */
 
 #!/bin/python3
@@ -24,10 +24,9 @@ import sys
 #
 
 def findMedian(arr):
-    a = arr.sort()
     n = len(arr)
-    med = n//2
-    return med
+    median = n//2+1
+    return median
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
