@@ -19,7 +19,8 @@ def solve(s):
     a = s.split()
     result = []
     for i in a:
-        result.append(i.capitalize())
+        if len(i)>0:
+            result.append(i[0].upper()+i[1:].lower())
     d = " ".join(result)   
     return d
         
